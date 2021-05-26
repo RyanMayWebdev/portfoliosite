@@ -28,7 +28,7 @@ function mobileMenuToggle() {
 }
 
 const observerOptions = {
-    root: document,
+    root: document.querySelector(".pageWrapper"),
     rootMargin: "0px",
     threshold: 0.3
 };
