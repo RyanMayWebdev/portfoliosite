@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Mate+SC&family=Rock+Salt&display=swap');
+
+/* Global */
+body {
+    background-color: #2b2b2b;
+    color: #e9e9e9;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+a {
+    color: #e9e9e9;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e9e9e9;
+}
+
+article {
+    padding-bottom: 200px;
+}
+
+h1,
+h2,h3 {
+    font-family: 'Mate SC', serif;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+p {
+    font-size: 1.1em;
+}
+/* Shared Classes */
+
+.articleColoured {
+    background-color: #45bd55;
+    color: #2b2b2b;
+}
+
+.articleColoured h2 {
+    padding: 50px 0;
+}
+
+.articleColoured p {
+    padding: 25px;
+}
+
+
+.articleContainer {
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.articleColoured .flexContainer div {
+    background-image: linear-gradient(45deg, #2b2b2b, #464545, #2b2b2b);
+} 
+
+.icon{
+    font-size: 1.6em;
+    margin-right: 15px;
+}
+.fade {
+    opacity: 0;
+    transform: scale(1);
+    transform: translateX(100px);
+    transition: all 0.5s;
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.fadeEnlarge{
+    transform: scale(1.2);
+}
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.flexContainer div {
+    background-image: linear-gradient(45deg, #287432, #45bd55, #287432);
+    border: 1px solid #2b2b2b;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #1d5324;
+    flex-shrink: 1;
+    margin: 75px;
+    padding: 50px 25px;
+    text-align: center;
+    width: 400px;
+
+}
+.greenFont {
+    color: #45bd55;
+}
+.hideElement {
+    transform: translateX(250px);
+    visibility: hidden;
+}
+
+.pageWrapper {
+    overflow-x: hidden;
+    width: 100%;
+}
+.projectCard {
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px #1d5324;
+    width: 250px;
+}
+
+.revealElement {
+    transform: translateX(0px);
+    visibility: visible;
+}
+
+/*Navigation classes */
+.backToTopBtn {
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    bottom: 50px;
+    color: #e9e9e9;
+    height: max-content;
+    padding: 0;
+    position: fixed;
+    right: 20px;
+    z-index: 10;
+}
+
+.backToTopBtn a {
+    display: block;
+    padding: 15px;
+}
+
+
+nav {
+    font-size: 2em;
+    height: fit-content;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100vw;
+    z-index: 150;
+
+}
+
+.navContainer {
+    align-items: center;
+    display: flex;
+    height: max-content;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 20px 15px;
+}
+
+.navLink {
+    display: inline-block;
+    padding: 25px;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.navLink:after {
+    border: none;
+    border-top: solid 2px #51019c;
+    bottom: 5px;
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    transition: all 0.5s;
+    width: 0%;
+}
+.navLink:hover::after{
+    width: 100%;
+}
+
+
+/* Mobile nav menu, for tablet and below */
+
+.fa-bars {
+    color: #ffffff;
+    padding: 10px 0px 20px 30px;
+}
+.mobileDropdown {
+    align-items: flex-start;
+    background-color: #2b2b2b;
+    box-shadow: 0px 0px 10px #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 10px;
+    padding-left: 20px;
+    position: fixed;
+    right: 10px;
+    text-align: left;
+    top: 45px;
+    transition: all 0.5s;
+    width: max-content;
+}
+.navMobileMenu {
+    display: none;
+    margin: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    right: 0px;
+    top: 10px;
+    width: 50px;
+}
+
+/* Welcome section */
+.background{
+    height: 100vh;
+    left: 0px;
+    margin: 35px 0;
+    position: absolute;
+    right: 0px;
+    top: -150px;
+    transform: skewY(3deg);
+    width: 100%;
+}
+.backgroundImage{
+    background-image: url(https://wallpapercave.com/wp/wp5209729.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+}
+
+.backgroundOverlay {
+    background-color: #45bd55;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.ctaBtn {
+    background-color: #51019c;
+    border-color: #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.ctaBtn a {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+
+#welcome {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    justify-content: center;
+    margin: 0 25px 100px;
+
+}
+
+.welcomeHeader {
+    color: #fff;
+    font-size: 5rem;
+    margin: 50px 0 0;
+}
+
+.welcomeSubHeader {
+    color: rgb(155, 0, 0);
+    font-family: 'Rock Salt', cursive;
+    margin: 0 0 35px;
+}
+
+/* About Section */
+#about {
+    margin-top: 250px;
+}
+
+#about a:visited {
+    color: #7c2fc4;
+}
+
+.profileImage {
+    border: 1px dotted #e9e9e9;
+    border-radius: 50%;
+    border-width: 4px;
+    height: 15%;
+    padding: 10px;
+    width: 200px;
+}
+
+/* Projects Section */
+#projects {
+    color:#2b2b2b;
+}
+
+#projects a {
+    display: block;
+    margin: 10px;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+    text-decoration-color: #51019c;
+    transform: scale(1.2);
+}
+/* Contact section */
+
+.contactBackground {
+    background-color: #45bd55;
+    height: 200px;
+    position: relative;
+    top: 140px;
+    transform: skewY(-3deg);
+    z-index: -1;
+}
+
+
+.contactUl {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+    padding: 150px 0 0 0;
+    width: 40%;
+
+}
+
+.contactList {
+    padding-top: 25px;
+}
+.contactList:hover {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 767px) {
+    .welcomeHeader {
+        font-size: 2rem;
+    }
+
+    .welcomeSubHeader {
+        font-size: 1.5rem;
+    }
+
+    .contactUl {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width:768px) {
+    .navMobileMenu {
+        display: block;
+    }
+
+    .navLink {
+        display: block;
+        padding: 10px 30px 10px 0px;
+    }
+
+    .navContainer {
+        display: none;
+    }
+}
+
+@media (orientation:landscape) and (max-height:768px){
+    .navMobileMenu {
+        display: block;
+    }
+
+    .navLink {
+        display: block;
+        padding: 10px 30px 10px 0px;
+    }
+
+    .navContainer {
+        display: none;
+    }
+    .background{
+        height: 120vh;
+    }
+    .welcomeHeader {
+        font-size: 2rem;
+    }
+
+    .welcomeSubHeader {
+        font-size: 1.5rem;
+    }
+}
