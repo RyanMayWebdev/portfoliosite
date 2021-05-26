@@ -74,15 +74,18 @@ p {
     margin-right: 15px;
 }
 .fade {
+    -khtml-opacity: 0;
     opacity: 0;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transform: translateX(100px);
     transform: translateX(100px);
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .fadeIn {
+    -khtml-opacity: 1;
     opacity: 1;
     -webkit-transform: translateX(0px);
     transform: translateX(0px);
