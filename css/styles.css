@@ -75,17 +75,21 @@ p {
 }
 .fade {
     opacity: 0;
+    -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-transform: translateX(100px);
     transform: translateX(100px);
     transition: all 0.5s;
 }
 
 .fadeIn {
     opacity: 1;
+    -webkit-transform: translateX(0px);
     transform: translateX(0px);
 }
 
 .fadeEnlarge{
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 .flexContainer {
